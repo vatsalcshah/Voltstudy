@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Thumbnail *"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:paddingTop="16dp"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            android:layout_alignStart="@id/course_image_layout"
+            android:textStyle="bold"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/course_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview2"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:id="@+id/create_course_thumbnail"
+                android:layout_width="0dp"
+                android:layout_height="225dp"
+                android:background="#2d2d2d"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intsr_create_course_thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:text="Please add a high quality image."
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/icon_create_course_thumbnail"
+                app:layout_constraintStart_toStartOf="@+id/icon_create_course_thumbnail"
+                app:layout_constraintTop_toBottomOf="@+id/icon_create_course_thumbnail" />
+
+            <ImageView
+                android:id="@+id/icon_create_course_thumbnail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/create_course_thumbnail"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/create_course_thumbnail"
+                app:layout_constraintTop_toTopOf="@+id/create_course_thumbnail"
+                app:layout_constraintVertical_bias="0.38"
+                app:srcCompat="@mipmap/ic_add_img" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card2"
+            android:visibility="visible"
+            android:layout_marginTop="16dp"
+            android:padding="20dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="7dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/circular_card"
+            android:layout_below="@id/course_image_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp">
+
+                <!-- Password Label -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/edittext_course_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_course_title"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/dropdown_course_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/spinner_bg"
+                    android:paddingVertical="8dp"
+                    android:spinnerMode="dialog"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/dropdown_course_category">
+
+                    <EditText
+                        android:id="@+id/edittext_course_subcategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter course sub-category"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/edittext_course_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter course language" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/dropdown_course_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/spinner_bg"
+                    android:paddingVertical="8dp"
+                    android:spinnerMode="dialog"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <TextView
+                    android:id="@+id/course_price_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Course Price"
+                    android:textColor="@color/colorMediumGray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/dropdown_course_type"
+                    app:layout_constraintTop_toBottomOf="@id/dropdown_course_type" />
+
+                <TextView
+                    android:id="@+id/create_course_price_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dropdown_course_price"
+                    app:layout_constraintStart_toStartOf="@id/course_price_textview"
+                    app:layout_constraintTop_toTopOf="@+id/dropdown_course_price" />
+
+                <Spinner
+                    android:id="@+id/dropdown_course_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/browser_actions_bg_grey"
+                    android:paddingVertical="8dp"
+                    android:spinnerMode="dialog"
+                    app:layout_constraintLeft_toRightOf="@+id/create_course_price_symbol"
+                    app:layout_constraintTop_toBottomOf="@+id/course_price_textview" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card3"
+            android:visibility="visible"
+            android:padding="20dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="7dp"
+            android:background="@drawable/circular_card"
+            android:layout_below="@id/card2"
+            android:layout_marginHorizontal="8dp"
+            >
+        <EditText
+            android:id="@+id/edittext_course_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Enter description of course"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:maxLength="1000"
+            android:maxHeight="180dp"
+            android:inputType="textMultiLine"
+            android:layout_centerHorizontal="true"
+            android:padding="16dp"
+            />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="32dp"
+            android:layout_below="@+id/card3"
+            android:layout_alignEnd="@id/card3"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        <ImageView
+            android:id="@+id/next_to_course_content"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/accent_circle_bg"
+            android:padding="8dp"
+            android:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_navigate_next"
+            android:layout_marginStart="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/create_course_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accent_circle_bg"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:indeterminateTintMode="src_atop"
+                android:padding="4dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/next_to_course_content"
+                app:layout_constraintStart_toStartOf="@+id/next_to_course_content"
+                app:layout_constraintTop_toTopOf="@+id/next_to_course_content" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</ScrollView>

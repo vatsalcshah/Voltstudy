@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/group_account"
+        android:title="Account"
+        android:visible="false">
+    <menu>
+    <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_manage_account"
+                android:icon="@drawable/ic_manage_account"
+                android:title="Manage Account" />
+    </group>
+    </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/group_instructor"
+        android:title="Instructor"
+        android:visible="false">
+    <menu>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_instructor_account"
+            android:icon="@drawable/ic_manage_instructor_account"
+            android:title="Trainer Account"
+            />
+    </group>
+    </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/group_extras"
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_share_app"
+                    android:icon="@drawable/ic_share"
+                    android:title="Share App With Friends"
+                    />
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:icon="@drawable/ic_star"
+                    android:title="Rate Us on Play Store"
+                    />
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/ic_feedback"
+                    android:title="Give Feedback/Suggestions"
+                    />
+                <item
+                    android:id="@+id/nav_faq"
+                    android:icon="@drawable/ic_faq"
+                    android:title="FAQs"
+                    />
+            </group>
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/nav_new_user"
+        android:icon="@drawable/ic_add_details"
+        android:title="Sign Up Now For Full Access"
+        android:visible="false"/>
+</menu>

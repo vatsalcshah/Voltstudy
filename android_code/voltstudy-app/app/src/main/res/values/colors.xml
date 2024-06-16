@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryLight">#d55b5b</color>
+    <color name="colorPrimary">#cb3232</color>
+    <color name="colorPrimaryDark">#7a1e1e</color>
+    <color name="colorAccent">#2d2d2d</color>
+    <color name="colorLightGray">#C5C5C5</color>
+    <color name="colorMediumGray">#6c6c6c</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="btn_logout_bg">#cb3232</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDarkSemiTransparent">#C6000000</color>
+    <color name="colorTextPrimary">#212121</color>
+
+    <color name="certificateBorder">#D18E29</color>
+    <color name="certificateHighlightTextColor">#5C0A0C</color>
+
+
+</resources>

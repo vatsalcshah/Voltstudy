@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorLightGray"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/instructor_email_img"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_verify_email"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/img_instructor_email" />
+
+    <EditText
+        android:id="@+id/edittext_instructor_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_frame"
+        android:hint="Enter Registered Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/instructor_email_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/instructor_email_img"
+        app:layout_constraintTop_toBottomOf="@+id/instructor_email_img"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_verify_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Verify Your Email"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/instructor_email_img"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/instructor_email_img"
+        app:layout_constraintTop_toBottomOf="@+id/btn_instr_email_back" />
+
+    <ImageView
+        android:id="@+id/next_to_instructor_form"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/accent_circle_bg"
+        android:padding="8dp"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_email"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_email"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_instructor_email"
+        app:srcCompat="@drawable/ic_navigate_next" />
+
+    <ProgressBar
+        android:id="@+id/instructor_email_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/accent_circle_bg"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTintMode="src_atop"
+        android:padding="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/next_to_instructor_form"
+        app:layout_constraintEnd_toEndOf="@+id/next_to_instructor_form"
+        app:layout_constraintStart_toStartOf="@+id/next_to_instructor_form"
+        app:layout_constraintTop_toTopOf="@+id/next_to_instructor_form" />
+
+    <ImageView
+        android:id="@+id/btn_instr_email_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

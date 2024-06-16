@@ -1,0 +1,228 @@
+{
+  "Comment": {
+    "post1_comment1": {
+      "comment_id1": {
+        "commentId": "comment_id1",
+        "content": "Sample comment 1...",
+        "timestamp": 1594132556937,
+        "uid": "user1",
+        "uname": "John Doe"
+      },
+      "comment_id2": {
+        "commentId": "comment_id2",
+        "content": "Sample comment 2...",
+        "timestamp": 1594983861169,
+        "uid": "user2",
+        "uname": "Jane Smith"
+      }
+    }
+  },
+
+  "Posts": {
+    "post1": {
+      "description": "Brief description of post 1...",
+      "postKey": "post1",
+      "timeStamp": 1594132216971,
+      "title": "How to set visibility of textview ?",
+      "userId": "user4",
+      "userName": "VoltStudy Team",
+      "userPhoto": "https://www.example.com/dummy_company_logo.png"
+    },
+    "post2": {
+      "description": "Brief description of post 2...",
+      "postKey": "post2",
+      "timeStamp": 1596009761490,
+      "title": "how to upload my course?",
+      "userId": "user5",
+      "userName": "Emily Davis"
+    },
+    "post3": {
+      "description": "Brief description of post 3...",
+      "postKey": "post3",
+      "timeStamp": 1596195237283,
+      "title": "teaching procedure",
+      "userId": "user6",
+      "userName": "Oliver Wilson"
+    },
+    "post4": {
+      "description": "userid- dummyemail@example.com",
+      "postKey": "post4",
+      "timeStamp": 1596397396223,
+      "title": "i already bought course in website, can i use it",
+      "userId": "user7",
+      "userName": "Sophia Thompson"
+    } 
+  },
+
+  "Results": {
+    "result1": {
+      "test_result1": {
+        "Test Name": {
+          "user1": 2,
+          "user8": 2,
+          "user4": 1
+        }
+      }
+    },
+    "result2": {
+      "test_result2": {
+        "Another Test": {
+          "user8": 2,
+          "user4": 0
+        }
+      }
+    }
+  },
+
+  "admins": {
+    "admin1": true,
+    "admin2": true
+  },
+
+  "banner_ad": {
+    "image_url": "https://www.example.com/dummy_ad_banner.jpg"
+  },
+
+  "categories": [
+    {"category_name": "Electrical"},
+    {"category_name": "Mechanical"},
+    {"category_name": "Civil Engineering"},
+    {"category_name": "Computers"}
+  ],
+
+  "certificateNumber": 12,
+
+  "commentLikes": {
+    "user2": {
+      "comment_id2": {
+        "user3": true,
+        "user2": true
+      }
+    }
+  },
+
+  "completed": {
+    "user10": {
+      "course1": {
+        "Video": 1,
+        "text": 1
+      }
+    }
+  },
+
+  "courses": {
+    "course1": {
+      "author": "VoltStudy Official",
+      "author_id": "user4",
+      "author_img_url": "https://www.example.com/dummy_company_logo.png",
+      "category": "Electrical",
+      "course_code": "course1",
+      "course_price": 699,
+      "course_type": "Text",
+      "desc": "Course description for course1...",
+      "imageUrl": "https://www.example.com/dummy_course_image1.jpg",
+      "language": "ENGLISH",
+      "name": "LINE CONSTRUCTION",
+      "promocode": "LINE_CONSTRUCTION-21468",
+      "sub_category": "Line construction"
+    }
+  },
+
+  "instructors": {
+    "instructor1": {
+      "birthdate": "21/7/1997",
+      "collegeName": "Dummy College",
+      "currentPosition": "certificate",
+      "degree": "Degree Holder",
+      "email": "dummyemail1@example.com",
+      "fieldOfStudy": "Engineering",
+      "mobile": "1234567890",
+      "monthly_revenue": 0,
+      "name": "John Smith",
+      "schoolName": "Dummy School",
+      "total_courses": 0,
+      "total_purchased_courses": 0
+    }
+  },
+
+  "languages": [
+    {"courses_languages": "ENGLISH"},
+    {"courses_languages": "HINDI"},
+    {"courses_languages": "MARATHI"}
+  ],
+
+  "purchasedCourses": {
+    "user10": [
+      {
+        "courseAuthor": "VoltStudy Official",
+        "courseAuthorID": "user4",
+        "courseCategory": "Electrical",
+        "courseCode": "-MB55pdi0lpphyuQpXgZ",
+        "courseImageUrl": "https://www.example.com/dummy_course_image1.jpg",
+        "courseLanguage": "ENGLISH",
+        "courseName": "DISTRIBUTION TRANSFORMER",
+        "coursePrice": 699,
+        "courseSubCategory": "Distribution Transformer",
+        "courseType": "Text"
+      }
+    ]
+  },
+
+  "referralProg": {
+    "user3": {
+      "referred_code": false,
+      "referred_number_users": 0
+    }
+  },
+
+  "tests": {
+    "course1": {
+      "test_id1": {
+        "Test Name": {
+          "Questions": [
+            {
+              "answer": "B",
+              "opt_A": "2",
+              "opt_B": "3",
+              "opt_C": "4",
+              "opt_D": "5",
+              "question": "Sample question 1?"
+            }
+          ],
+          "Time": 2
+        }
+      }
+    }
+  },
+
+  "textcourses": {
+    "course1": {
+      "text_course1": {
+        "name": "T&D System",
+        "number": 1,
+        "textCourseID": "text_course1",
+        "textcontent": "https://www.example.com/dummy_text_content1.pdf"
+      }
+    }
+  },
+
+  "videos": {
+    "course_video1": {
+      "video_id1": {
+        "download_url": "https://www.example.com/dummy_video.mp4",
+        "name": "Video Title",
+        "number": 1,
+        "videoID": "video_id1"
+      }
+    }
+  },
+
+  "feedback": {
+    "user8": {
+      "email": "dummyemail8@example.com",
+      "feedback": "Sample feedback...",
+      "name": "Sarah Johnson"
+    }
+  }
+}
+

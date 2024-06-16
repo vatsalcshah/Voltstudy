@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimaryLight">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_instructor_form"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_instructor_form" />
+
+    <EditText
+        android:id="@+id/edittext_instructor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_frame"
+        android:hint="Enter Full Name"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_instructor_form" />
+
+    <EditText
+        android:id="@+id/edittext_instructor_birthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_frame"
+        android:hint="Enter Birth Date"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_name"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_name"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_instructor_name" />
+
+    <EditText
+        android:id="@+id/edittext_instructor_mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_frame"
+        android:hint="Enter Mobile Number"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_birthdate"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_birthdate"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_instructor_birthdate" />
+
+    <Button
+        android:id="@+id/btn_next_to_portfolio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/become_instructor_loader" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/become_instructor_loader"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="10dp"
+        android:visibility="invisible"
+        app:indicatorColor="@color/white"
+        app:indicatorName="BallScaleMultipleIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/marketing_checkbox" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Do you want your courses to be marketed by VoltStudy ?"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintStart_toStartOf="@+id/edittext_instructor_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_instructor_mobile"
+        />
+
+    <CheckBox
+        android:id="@+id/marketing_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:buttonTint="@color/white"
+        android:text="Yes"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".home_section.TextContentActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorLightGray">
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBar_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+    
+    <TextView
+        android:id="@+id/seekBar_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar_pdf"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    </RelativeLayout>

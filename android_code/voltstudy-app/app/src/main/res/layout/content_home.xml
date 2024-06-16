@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_section.HomeActivity">
+
+    <include
+        layout="@layout/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+    <RelativeLayout
+    android:id="@+id/main_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="18dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_latest_courses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_ad_banner"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="24dp"
+            android:text="Featured Content"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="12dp"
+        android:overScrollMode="never"
+        android:layout_below="@+id/title_latest_courses"
+        android:id="@+id/rvCourseList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvCourseList"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="24dp"
+            android:text="Categories"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:overScrollMode="never"
+            android:layout_below="@+id/title_categories"
+            android:id="@+id/rvCourseCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="72dp"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_marginTop="36dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar_home"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:layout_gravity="bottom|center"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

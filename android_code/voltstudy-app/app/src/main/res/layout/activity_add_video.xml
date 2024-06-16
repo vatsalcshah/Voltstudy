@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".create_course_section.AddVideoActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+
+        <Button
+            android:id="@+id/btn_upload_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorAccent"
+            android:text="Upload"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/add_video_progressbar"
+            app:layout_constraintStart_toStartOf="@+id/add_video_progressbar"
+            app:layout_constraintTop_toBottomOf="@+id/add_video_progressbar" />
+
+        <ProgressBar
+            android:id="@+id/add_video_progress_circle"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/accent_circle_bg"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_upload_video"
+            app:layout_constraintEnd_toEndOf="@+id/btn_upload_video"
+            app:layout_constraintStart_toStartOf="@+id/btn_upload_video"
+            app:layout_constraintTop_toTopOf="@+id/btn_upload_video" />
+
+
+        <Button
+            android:id="@+id/btn_change_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Change Video"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/add_video_progressbar"
+            app:layout_constraintStart_toStartOf="@+id/add_video_progressbar"
+            app:layout_constraintTop_toBottomOf="@+id/hint_video_title" />
+
+        <ProgressBar
+            android:id="@+id/add_video_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:max="100"
+            app:layout_constraintEnd_toEndOf="@+id/video_view_layout"
+            app:layout_constraintStart_toStartOf="@+id/video_view_layout"
+            app:layout_constraintTop_toBottomOf="@+id/video_view_layout" />
+
+        <FrameLayout
+            android:id="@+id/video_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_change_video">
+
+            <VideoView
+                android:id="@+id/add_video_view"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/hint_video_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Video Number"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/hint_video_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_video_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/hint_video_number"
+            app:layout_constraintStart_toEndOf="@+id/hint_video_number"
+            app:layout_constraintTop_toTopOf="@+id/hint_video_number" />
+
+        <TextView
+            android:id="@+id/hint_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Video Title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/video_view_layout"
+            app:layout_constraintTop_toBottomOf="@+id/hint_video_number" />
+
+        <EditText
+            android:id="@+id/editText_video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Video Title"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@+id/hint_video_title"
+            app:layout_constraintEnd_toEndOf="@+id/editText_video_number"
+            app:layout_constraintStart_toStartOf="@+id/editText_video_number"
+            app:layout_constraintTop_toTopOf="@+id/hint_video_title" />
+
+        <ImageView
+            android:id="@+id/img_add_video"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            app:layout_constraintBottom_toBottomOf="@+id/video_view_layout"
+            app:layout_constraintEnd_toEndOf="@+id/video_view_layout"
+            app:layout_constraintStart_toStartOf="@+id/video_view_layout"
+            app:layout_constraintTop_toTopOf="@+id/video_view_layout"
+            app:layout_constraintVertical_bias="0.37"
+            app:srcCompat="@mipmap/ic_add_video" />
+
+        <TextView
+            android:id="@+id/txt_select_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Click Button To Select Video From Device"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/img_add_video"
+            app:layout_constraintStart_toStartOf="@+id/img_add_video"
+            app:layout_constraintTop_toBottomOf="@+id/img_add_video" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_video_next_skip_to_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/next_to_course_text"
+            app:layout_constraintEnd_toStartOf="@+id/next_to_course_text"
+            app:layout_constraintTop_toTopOf="@+id/next_to_course_text" />
+
+        <ImageView
+            android:id="@+id/next_to_course_text"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/accent_circle_bg"
+            android:padding="8dp"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_upload_video"
+            app:srcCompat="@drawable/ic_navigate_next" />
+
+        <TextView
+            android:id="@+id/instructions_video_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="@string/video_instr"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/btn_upload_video"
+            app:layout_constraintStart_toStartOf="@+id/btn_upload_video"
+            app:layout_constraintTop_toBottomOf="@+id/btn_upload_video" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vatsal.voltstudy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:largeHeap="true"
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="voltstudy"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:replace="label"
+        tools:targetApi="29">
+        <activity android:name="com.vatsal.voltstudy.home_section.FaqActivity"/>
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.auth_controller.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.auth_controller.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.splash_section.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vatsal.voltstudy.auth_controller.ResetPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.attempt_quiz.AttemptTest"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.attempt_quiz.Tests"
+            android:label="@string/title_activity_tests"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.auth_controller.ManageDetails"
+            android:label="Manage Details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.splash_section.SplashAnimation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.create_course_section.QuizFormActivity"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name="com.vatsal.voltstudy.notification_section.MyFirebaseInstanceIDService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.vatsal.voltstudy.notification_section.MyFirebaseMessagingService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service android:name="com.vatsal.voltstudy.notification_section.NotificationService" />
+
+        <activity
+            android:name="com.vatsal.voltstudy.discussion_section.DiscussionActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.search_section.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.VideoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.CourseContentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.search_section.LanguagesListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.CategoriesListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.CourseDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.tech_trainer_section.InstructorEmailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.create_course_section.CreateCourseActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.vatsal.voltstudy.discussion_section.DiscussionPostDetailActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.create_course_section.AddVideoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.create_course_section.AddTextActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.vatsal.voltstudy.tech_trainer_section.InstructorFormActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.home_section.TextContentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.my_courses_section.MyCoursesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.vatsal.voltstudy.tech_trainer_section.InstructorCoursesList"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.tech_trainer_section.InstructorPortfolioActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.vatsal.voltstudy.tech_trainer_section.TechTrainerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.vatsal.voltstudy.home_section.FeedbackActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

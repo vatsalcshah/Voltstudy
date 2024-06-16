@@ -1,0 +1,83 @@
+{
+  "rules": {
+    "tests":{
+      ".read": "auth != null",
+    	".write": "auth !=null",
+    },
+          "courses":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+       "certificateNumber":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+     "commentLikes":{
+      ".read": "auth !=null",
+    	".write": "auth !=null",
+    },
+          "languages":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+                "categories":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+                "banner_ad":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+          "purchasedCourses":{
+      ".read": "auth != null",
+    	".write": "auth !=null",
+    },
+      "savedCourses":{
+      ".read": "auth != null",
+    	".write": "auth !=null",
+    },
+                "blog_images":{
+      ".read": "auth != null",
+    	".write": "auth !=null",
+    },          "Posts":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },          "Comment":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+                "textcourses":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+      "videos":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+       "instructors":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+       "feedback":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+      
+       "completed":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+             "users":{
+      ".read": "true",
+    	".write": "auth !=null",
+    },
+    "Results" : {
+      ".read": "auth != null",
+        ".write": "auth != null"
+    },
+      "admins" :{
+        ".read":"auth!=null",
+          ".write":"auth != null"
+      }
+  }
+}
